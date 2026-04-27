@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crisis Reputacional Enel Colombia — Análisis Ejecutivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0A0A0C;
+  --ink2:#1A1A22;
+  --ink3:#2C2C38;
+  --paper:#F5F3EE;
+  --paper2:#EDE9E0;
+  --paper3:#E3DDD1;
+  --rule:#C8C0AD;
+  --rule2:#B5AC97;
+  --red:#C0392B;
+  --red2:#9B2519;
+  --red-bg:#FDF0EE;
+  --amber:#B8860B;
+  --amber-bg:#FDF8EE;
+  --teal:#1A6B62;
+  --teal-bg:#EEF7F6;
+  --slate:#3A4A6B;
+  --slate-bg:#EEF1F7;
+  --text:#1A1A22;
+  --text2:#4A4A5A;
+  --text3:#7A7A8A;
+  --accent:#C0392B;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--text);
+  font-family:'Instrument Sans',sans-serif;
+  font-size:14px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1080px;margin:0 auto;padding:56px 48px 100px}
+
+/* ─── PRINT RULE TEXTURE ─── */
+.page::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(180,170,150,0.08) 27px,
+      rgba(180,170,150,0.08) 28px
+    );
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ─── HEADER ─── */
+.doc-header{
+  border-bottom:2px solid var(--ink);
+  padding-bottom:32px;
+  margin-bottom:48px;
+  position:relative;
+}
+.doc-eyebrow{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:28px;
+}
+.firm-mark{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--text3);
+  line-height:1.8;
+}
+.firm-mark strong{
+  display:block;
+  color:var(--text2);
+  font-size:11px;
+  letter-spacing:0.12em;
+  margin-bottom:2px;
+}
+.doc-classification{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.classification-badge{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:2px;
+}
+.doc-title-block{position:relative}
+.doc-label{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:10px;
+}
+.doc-title{
+  font-family:'Playfair Display',serif;
+  font-size:52px;
+  font-weight:500;
+  line-height:1.05;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+  margin-bottom:8px;
+}
+.doc-title em{color:var(--red);font-style:italic}
+.doc-subtitle{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  font-weight:400;
+  font-style:italic;
+  color:var(--text2);
+  margin-bottom:24px;
+  letter-spacing:0.01em;
+}
+.doc-meta-strip{
+  display:flex;
+  align-items:center;
+  gap:0;
+  border-top:1px solid var(--rule);
+  padding-top:16px;
+  margin-top:16px;
+}
+.meta-item{
+  padding:0 24px 0 0;
+  margin-right:24px;
+  border-right:1px solid var(--rule);
+  font-size:11px;
+  color:var(--text3);
+  font-family:'Instrument Sans',sans-serif;
+}
+.meta-item:last-child{border-right:none;margin-right:0;padding-right:0}
+.meta-item strong{
+  display:block;
+  font-size:16px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.2;
+  margin-bottom:2px;
+  font-family:'Playfair Display',serif;
+}
+
+/* ─── SITUATIONAL ABSTRACT ─── */
+.abstract{
+  background:var(--ink);
+  color:var(--paper);
+  border-radius:4px;
+  padding:36px 40px;
+  margin-bottom:48px;
+  position:relative;
+  overflow:hidden;
+}
+.abstract::before{
+  content:'\201C';
+  font-family:'Playfair Display',serif;
+  font-size:200px;
+  position:absolute;
+  top:-40px;
+  left:24px;
+  color:rgba(255,255,255,0.04);
+  line-height:1;
+  pointer-events:none;
+}
+.abstract-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:rgba(245,243,238,0.45);
+  margin-bottom:14px;
+}
+.abstract-text{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(245,243,238,0.92);
+  font-style:italic;
+  max-width:860px;
+}
+.abstract-source{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  color:rgba(192,57,43,0.9);
+  margin-top:16px;
+  letter-spacing:0.08em;
+}
+
+/* ─── SECTION ARCHITECTURE ─── */
+.section{margin-bottom:52px}
+.section-header{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  margin-bottom:24px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--rule);
+}
+.section-number{
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  color:var(--text3);
+  letter-spacing:0.1em;
+  flex-shrink:0;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  font-weight:500;
+  color:var(--ink);
+  line-height:1.2;
+}
+.section-rule{flex:1;height:1px;background:transparent}
+
+/* ─── EXECUTIVE METRICS ROW ─── */
+.metrics-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:28px;
+}
+.metric-block{
+  background:var(--paper);
+  padding:22px 24px;
+  position:relative;
+}
+.metric-block.accent-red{background:var(--red-bg)}
+.metric-block.accent-amber{background:var(--amber-bg)}
+.metric-block.accent-slate{background:var(--slate-bg)}
+.metric-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:8px;
+}
+.metric-value{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:700;
+  line-height:1;
+  margin-bottom:4px;
+}
+.metric-block.accent-red .metric-value{color:var(--red)}
+.metric-block.accent-amber .metric-value{color:var(--amber)}
+.metric-block.accent-slate .metric-value{color:var(--slate)}
+.metric-desc{font-size:11px;color:var(--text3);line-height:1.4}
+
+/* ─── CHRONICLE / TIMELINE ─── */
+.chronicle{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+.chronicle-item{
+  display:grid;
+  grid-template-columns:110px 28px 1fr;
+  gap:0;
+  min-height:72px;
+}
+.chronicle-item:last-child .chr-line{opacity:0}
+.chr-date{
+  padding:14px 0;
+  text-align:right;
+  padding-right:20px;
+}
+.chr-date-main{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:var(--text3);
+  display:block;
+}
+.chr-date-sub{font-size:9px;color:var(--text3);opacity:0.65;display:block;margin-top:2px}
+.chr-spine{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0;
+}
+.chr-node{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  border:2px solid var(--paper);
+  flex-shrink:0;
+  margin-top:18px;
+  position:relative;
+  z-index:2;
+  box-shadow:0 0 0 1px currentColor;
+}
+.chr-node.lvl-critico{background:var(--red);color:var(--red)}
+.chr-node.lvl-alto{background:var(--amber);color:var(--amber)}
+.chr-node.lvl-medio{background:var(--teal);color:var(--teal)}
+.chr-node.lvl-bajo{background:var(--rule2);color:var(--rule2)}
+.chr-line{
+  flex:1;
+  width:1px;
+  background:var(--rule);
+  margin-top:4px;
+}
+.chr-content{
+  padding:12px 0 12px 20px;
+  border-left:1px solid var(--paper2);
+}
+.chr-event{
+  font-size:13px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.3;
+  margin-bottom:3px;
+}
+.chr-sub{font-size:12px;color:var(--text2);line-height:1.5}
+.chr-severity{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:8px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  padding:2px 7px;
+  border-radius:2px;
+  margin-top:5px;
+}
+.sev-critico{background:rgba(192,57,43,0.1);color:var(--red);border:1px solid rgba(192,57,43,0.25)}
+.sev-alto{background:rgba(184,134,11,0.1);color:var(--amber);border:1px solid rgba(184,134,11,0.25)}
+.sev-medio{background:rgba(26,107,98,0.1);color:var(--teal);border:1px solid rgba(26,107,98,0.25)}
+.sev-hito{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
+
+/* ─── ESCALATION PHASES ─── */
+.phases{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  overflow:hidden;
+}
+.phase-block{
+  background:var(--paper);
+  padding:22px;
+}
+.phase-block.p1{border-top:3px solid var(--teal)}
+.phase-block.p2{border-top:3px solid var(--amber)}
+.phase-block.p3{border-top:3px solid var(--red)}
+.phase-num{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:4px;
+}
+.phase-title{
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink);
+  margin-bottom:4px;
+}
+.phase-dates{
+  font-size:11px;
+  color:var(--text3);
+  font-family:'DM Mono',monospace;
+  margin-bottom:10px;
+}
+.phase-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
+/* ─── TWO COLUMN LAYOUT ─── */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;align-items:start}
+.cols-65-35{display:grid;grid-template-columns:65fr 35fr;gap:24px;margin-bottom:24px;align-items:start}
+
+/* ─── CHANNELS TABLE ─── */
+.channels-table{width:100%;border-collapse:collapse}
+.channels-table th{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text3);
+  padding:8px 12px;
+  text-align:left;
+  border-bottom:1px solid var(--rule);
+  background:var(--paper2);
+}
+.channels-table td{
+  padding:11px 12px;
+  font-size:12px;
+  color:var(--text2);
+  border-bottom:1px solid rgba(200,192,173,0.4);
+  vertical-align:top;
+}
+.channels-table tr:last-child td{border-bottom:none}
+.channels-table tbody tr:hover{background:var(--paper2)}
+.ch-name{font-weight:600;color:var(--ink);font-size:12px}
+.ch-reach{font-family:'DM Mono',monospace;font-size:11px;color:var(--text2)}
+.tone-pill{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:8px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:2px;
+}
+.tone-neg{background:rgba(192,57,43,0.1);color:var(--red);border:1px solid rgba(192,57,43,0.2)}
+.tone-neu{background:rgba(26,107,98,0.08);color:var(--teal);border:1px solid rgba(26,107,98,0.2)}
+.tone-mix{background:rgba(184,134,11,0.1);color:var(--amber);border:1px solid rgba(184,134,11,0.2)}
+
+/* ─── CONVERSATION METRICS ─── */
+.conv-metrics{
+  background:var(--paper2);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:22px;
+  height:100%;
+}
+.conv-bar-row{margin-bottom:14px}
+.conv-bar-row:last-child{margin-bottom:0}
+.conv-bar-label{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:5px;
+  font-size:11px;
+}
+.conv-bar-name{color:var(--text2);font-weight:500}
+.conv-bar-level{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  color:var(--text3);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.conv-bar-track{background:var(--paper3);border-radius:2px;height:4px;overflow:hidden}
+.conv-bar-fill{height:100%;border-radius:2px}
+.fill-red{background:var(--red)}
+.fill-amber{background:var(--amber)}
+.fill-teal{background:var(--teal)}
+
+/* ─── REPUTATION ATTRIBUTES ─── */
+.rep-table{width:100%;border-collapse:collapse}
+.rep-table td{padding:12px 0;border-bottom:1px solid rgba(200,192,173,0.5);vertical-align:top}
+.rep-table tr:last-child td{border-bottom:none}
+.rep-icon{font-size:16px;padding-right:14px;width:32px}
+.rep-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.rep-source{font-size:11px;color:var(--text3)}
+.rep-freq{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:2px;
+  white-space:nowrap;
+}
+.freq-h{background:rgba(192,57,43,0.1);color:var(--red);border:1px solid rgba(192,57,43,0.2)}
+.freq-m{background:rgba(184,134,11,0.1);color:var(--amber);border:1px solid rgba(184,134,11,0.2)}
+
+/* ─── AUDIENCE EMOTION MAP ─── */
+.emotion-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.emotion-card{
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:18px;
+  background:var(--paper);
+  position:relative;
+  overflow:hidden;
+}
+.emotion-card::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;bottom:0;width:3px;
+}
+.em-1::after{background:var(--red)}
+.em-2::after{background:var(--amber)}
+.em-3::after{background:var(--teal)}
+.em-4::after{background:var(--slate)}
+.emotion-icon{font-size:20px;margin-bottom:8px;display:block}
+.emotion-name{
+  font-family:'Playfair Display',serif;
+  font-size:14px;
+  font-weight:500;
+  color:var(--ink);
+  margin-bottom:5px;
+}
+.emotion-desc{font-size:11px;color:var(--text2);line-height:1.55}
+
+/* ─── NARRATIVE BLOCK ─── */
+.narrative-box{
+  border:1px solid var(--rule);
+  border-top:3px solid var(--red);
+  border-radius:0 0 4px 4px;
+  background:var(--paper);
+  padding:20px 22px;
+  margin-top:16px;
+}
+.narrative-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:12px;
+}
+.narrative-item{
+  background:var(--red-bg);
+  border:1px solid rgba(192,57,43,0.15);
+  border-radius:3px;
+  padding:9px 12px;
+  font-size:12px;
+  color:var(--text2);
+  line-height:1.5;
+  margin-bottom:7px;
+}
+.narrative-item:last-child{margin-bottom:0}
+
+/* ─── STRATEGIC RECOMMENDATIONS ─── */
+.recommendations{display:flex;flex-direction:column;gap:0}
+.rec-item{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:0;
+  border-bottom:1px solid var(--rule);
+  padding:20px 0;
+}
+.rec-item:last-child{border-bottom:none}
+.rec-number{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:400;
+  color:var(--rule2);
+  line-height:1;
+  padding-top:2px;
+}
+.rec-content{padding-left:8px}
+.rec-title{
+  font-family:'Playfair Display',serif;
+  font-size:16px;
+  font-weight:500;
+  color:var(--ink);
+  margin-bottom:6px;
+  line-height:1.3;
+}
+.rec-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.rec-priority{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:8px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  padding:2px 7px;
+  border-radius:2px;
+  margin-bottom:6px;
+  background:var(--ink);
+  color:var(--paper);
+}
+
+/* ─── CALLOUT BOX ─── */
+.callout{
+  background:var(--paper2);
+  border-left:3px solid var(--text3);
+  padding:14px 18px;
+  border-radius:0 4px 4px 0;
+  margin-top:14px;
+}
+.callout.callout-red{border-left-color:var(--red);background:var(--red-bg)}
+.callout.callout-teal{border-left-color:var(--teal);background:var(--teal-bg)}
+.callout-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:4px;
+}
+.callout.callout-red .callout-label{color:var(--red)}
+.callout.callout-teal .callout-label{color:var(--teal)}
+.callout-text{font-size:12px;color:var(--text2);line-height:1.55}
+
+/* ─── CARD CONTAINER ─── */
+.card{
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  padding:24px;
+  height:100%;
+}
+.card-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.card-label::before{
+  content:'';
+  width:16px;height:1px;
+  background:var(--text3);
+  display:inline-block;
+}
+
+/* ─── FINDING BOX ─── */
+.finding{
+  border:1px solid var(--rule);
+  border-left:3px solid var(--teal);
+  border-radius:0 4px 4px 0;
+  padding:14px 18px;
+  background:var(--teal-bg);
+  margin-top:16px;
+}
+.finding-label{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:4px;
+}
+.finding-text{font-size:12px;color:var(--text2);line-height:1.55}
+
+/* ─── FOOTER ─── */
+.doc-footer{
+  border-top:1px solid var(--rule);
+  padding-top:24px;
+  margin-top:64px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+.footer-left{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.1em;
+  color:var(--text3);
+  line-height:1.8;
+}
+.footer-left strong{color:var(--text2);letter-spacing:0.14em}
+.footer-right{
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  color:var(--text3);
+  text-align:right;
+  letter-spacing:0.08em;
+  line-height:1.8;
+}
+.footer-logo{
+  font-family:'Playfair Display',serif;
+  font-size:14px;
+  color:var(--ink);
+  font-weight:500;
+  margin-bottom:2px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:720px){
+  .page{padding:32px 20px 60px}
+  .doc-title{font-size:34px}
+  .cols2,.cols-65-35,.phases,.metrics-row{grid-template-columns:1fr}
+  .emotion-grid{grid-template-columns:1fr}
+  .doc-eyebrow{flex-direction:column;gap:12px}
+  .doc-meta-strip{flex-wrap:wrap;gap:12px}
+  .meta-item{border-right:none;padding-right:0;margin-right:0}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ════════════════════ DOCUMENT HEADER ════════════════════ -->
+<div class="doc-header">
+  <div class="doc-eyebrow">
+    <div class="firm-mark">
+      <strong>Punto Cardinal Comunicaciones</strong>
+      Área de Análisis
+    </div>
+    <div class="doc-classification">
+      <span class="classification-badge">Confidencial — Uso interno</span>
+    </div>
+  </div>
+
+  <div class="doc-title-block">
+    <div class="doc-label">Reporte ejecutivo de crisis reputacional</div>
+    <div class="doc-title">Crisis <em>Enel Colombia</em></div>
+    <div class="doc-subtitle">Petro vs. Energía — Análisis de Conversación Pública</div>
+  </div>
+
+  <div class="doc-meta-strip">
+    <div class="meta-item">
+      <strong>$2.847M</strong>
+      Multa Superservicios
+    </div>
+    <div class="meta-item">
+      <strong>+1M</strong>
+      Alcance acumulado
+    </div>
+    <div class="meta-item">
+      <strong>16 días</strong>
+      Crisis activa
+    </div>
+    <div class="meta-item">
+      <strong>26 ABR 2026</strong>
+      Fecha de corte
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ ABSTRACT ════════════════════ -->
+<div class="abstract">
+  <div class="abstract-label">Declaración presidencial · Detonante de cierre</div>
+  <div class="abstract-text">
+    "Efectivamente el mayor responsable del crecimiento de la tasa de inflación del mes de marzo fue Enel y no el salario vital. Enel especuló y ha sido sancionada... Solicito oficialmente a la empresa Enel del grupo EEB devolver el sobrecosto cobrado a los usuarios de energía en la próxima factura."
+  </div>
+  <div class="abstract-source">— Presidente Gustavo Petro (@petrogustavo) · 24 de abril de 2026</div>
+</div>
+
+<!-- ════════════════════ SECCIÓN 1: CRONOLOGÍA ════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <span class="section-title">Cronología de la crisis</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr;gap:24px">
+    <div class="card">
+      <div class="card-label">Línea de tiempo — 10 al 26 de abril de 2026</div>
+      <div class="chronicle">
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">10 ABR</span><span class="chr-date-sub">Apertura</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-medio"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Primer trino presidencial</div>
+            <div class="chr-sub">Petro pide explicaciones a Enel por el alza inflacionaria de marzo. 300.000 visualizaciones / 1,21% de interacción.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">13 ABR</span><span class="chr-date-sub">Escalada</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-alto"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Consejo de Ministros — Ipiales</div>
+            <div class="chr-sub">Petro califica el alza como "acción especulativa" y anuncia decreto tarifario en cadena nacional.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">15 ABR</span><span class="chr-date-sub">Crítico</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-critico"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Trino directo + Semana.com + Congreso</div>
+            <div class="chr-sub">Enel acusada de "burlar la función constitucional". Mar Pizarro exige explicaciones (10% de interacción).</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">16–20 ABR</span><span class="chr-date-sub">Pausa</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-medio"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Ventana de relativa calma</div>
+            <div class="chr-sub">Radio Santa Fe amplifica. Sin declaraciones de fin de semana. Migración parcial a otros temas.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">21 ABR</span><span class="chr-date-sub">Pico máximo</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-critico"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Consejo de Ministros + Blu Radio viral</div>
+            <div class="chr-sub">Enel entra al debate Banrep / salario mínimo. Instagram Blu Radio: 301.000 visualizaciones, 3.415 comentarios.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">22 ABR</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-alto"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">15 notas en prensa nacional + investigación de Superservicios</div>
+            <div class="chr-sub">El Tiempo, Semana, Infobae cubren el caso. Superservicios adelanta investigación formal por distorsión de precios en bolsa.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">24 ABR</span><span class="chr-date-sub">Multa</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-critico"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Multa histórica de $2.847 millones confirmada</div>
+            <div class="chr-sub">Superservicios sanciona a Enel por distorsionar precios en bolsa. La acusación política se convierte en hecho comprobado.</div>
+            
+          </div>
+        </div>
+        <div class="chronicle-item">
+          <div class="chr-date"><span class="chr-date-main">26 ABR</span><span class="chr-date-sub">Respuesta</span></div>
+          <div class="chr-spine"><div class="chr-node lvl-medio"></div><div class="chr-line"></div></div>
+          <div class="chr-content">
+            <div class="chr-event">Enel rompe el silencio — comunicado oficial en Semana</div>
+            <div class="chr-sub">La empresa aclara que el alza de marzo refleja el fin de un descuento extraordinario aplicado en enero (−40 pesos/kWh), no una especulación. Sostiene que su tarifa sigue por debajo del promedio nacional y que la multa de Superservicios corresponde a hechos de octubre de 2022, sin relación con la factura de marzo de 2026.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════ SECCIÓN 2: CANALES ════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <span class="section-title">Canales, métricas y cobertura</span>
+  </div>
+
+  <div class="cols2">
+    <div class="card">
+      <div class="card-label">Canales afectados</div>
+      <table class="channels-table">
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th>Alcance / Dato clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="ch-name">X — @petrogustavo</div></td>
+            <td><span class="ch-reach">475K+ visualizaciones · 4 publicaciones</span></td>
+          </tr>
+          <tr>
+            <td><div class="ch-name">Instagram @bluradio</div></td>
+            <td><span class="ch-reach">301.000 visual. · 3.415 comentarios</span></td>
+          </tr>
+          <tr>
+            <td><div class="ch-name">TV / Cadena Nacional</div></td>
+            <td><span class="ch-reach">2 Consejos · 8M+ por emisión</span></td>
+          </tr>
+          <tr>
+            <td><div class="ch-name">Prensa</div></td>
+            <td><span class="ch-reach">15+ notas · El Tiempo, Semana, Infobae</span></td>
+          </tr>
+          <tr>
+            <td><div class="ch-name">Actores institucionales</div></td>
+            <td><span class="ch-reach">Superservicios · Mar Pizarro · Grupo Energía Bogotá</span></td>
+          </tr>
+          <tr>
+            <td><div class="ch-name">Radio / Portales regionales</div></td>
+            <td><span class="ch-reach">Radio Santa Fe · HSB · Caracol</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Focos de conversación digital</div>
+      <div class="conv-metrics" style="border:none;padding:0;background:transparent">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px">
+          <div style="text-align:center;padding:12px;background:var(--red-bg);border:1px solid rgba(192,57,43,0.15);border-radius:3px">
+            <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--red)">1.796</div>
+            <div style="font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;font-family:'DM Mono',monospace;margin-top:3px">Menciones 10 abr.</div>
+          </div>
+          <div style="text-align:center;padding:12px;background:var(--amber-bg);border:1px solid rgba(184,134,11,0.15);border-radius:3px">
+            <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--amber)">301K</div>
+            <div style="font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;font-family:'DM Mono',monospace;margin-top:3px">Visual. Blu Radio</div>
+          </div>
+          <div style="text-align:center;padding:12px;background:var(--paper2);border:1px solid var(--rule);border-radius:3px">
+            <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink)">10%</div>
+            <div style="font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;font-family:'DM Mono',monospace;margin-top:3px">Interac. M. Pizarro</div>
+          </div>
+        </div>
+        <div class="conv-bar-row">
+          <div class="conv-bar-label"><span class="conv-bar-name">Cuestionamientos técnicos al 9%</span></div>
+          <div class="conv-bar-track"><div class="conv-bar-fill fill-red" style="width:90%"></div></div>
+        </div>
+        <div class="conv-bar-row" style="margin-top:10px">
+          <div class="conv-bar-label"><span class="conv-bar-name">Críticas políticas al presidente</span></div>
+          <div class="conv-bar-track"><div class="conv-bar-fill fill-amber" style="width:70%"></div></div>
+        </div>
+        <div class="conv-bar-row" style="margin-top:10px">
+          <div class="conv-bar-label"><span class="conv-bar-name">Debate sobre inflación y costo de vida</span></div>
+          <div class="conv-bar-track"><div class="conv-bar-fill fill-amber" style="width:65%"></div></div>
+        </div>
+        <div class="conv-bar-row" style="margin-top:10px">
+          <div class="conv-bar-label"><span class="conv-bar-name">Defensa del presidente / crítica empresas</span></div>
+          <div class="conv-bar-track"><div class="conv-bar-fill fill-teal" style="width:45%"></div></div>
+        </div>
+        <div class="conv-bar-row" style="margin-top:10px">
+          <div class="conv-bar-label"><span class="conv-bar-name">Debate técnico mercado eléctrico</span></div>
+          <div class="conv-bar-track"><div class="conv-bar-fill fill-teal" style="width:40%"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SECCIÓN 3: IMPACTO REPUTACIONAL ════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <span class="section-title">Impacto reputacional y percepción ciudadana</span>
+  </div>
+
+  <div class="cols2">
+    <div class="card">
+      <div class="card-label">Atributos negativos consolidados en cobertura</div>
+      <table class="rep-table">
+        <tbody>
+          <tr>
+            <td class="rep-icon">💸</td>
+            <td>
+              <div class="rep-title">Especulación tarifaria / compra a sí mismo</div>
+              <div class="rep-source">8 de 14 días activo · Petro, Semana, Blu Radio, Valora Analitik</div>
+            </td>
+            
+          </tr>
+          <tr>
+            <td class="rep-icon">📈</td>
+            <td>
+              <div class="rep-title">Responsable del alza de inflación de marzo</div>
+              <div class="rep-source">7 de 14 días activo · Petro, Caracol, El Tiempo, Infobae</div>
+            </td>
+            
+          </tr>
+          <tr>
+            <td class="rep-icon">🔇</td>
+            <td>
+              <div class="rep-title">Opacidad / falta de respuesta pública</div>
+              <div class="rep-source">5 de 14 días · "Todavía no ha sido explicado" — Superservicios</div>
+            </td>
+            
+          </tr>
+          <tr>
+            <td class="rep-icon">⚖️</td>
+            <td>
+              <div class="rep-title">Fórmula tarifaria "inconstitucional"</div>
+              <div class="rep-source">4 de 14 días · Petro, Radio Santa Fe, Semana</div>
+            </td>
+            
+          </tr>
+          <tr>
+            <td class="rep-icon">🚫</td>
+            <td>
+              <div class="rep-title">Obstáculo para reducción del costo de vida</div>
+              <div class="rep-source">3 de 14 días · Consejo de Ministros 21 abr., Blu Radio, Valora Analitik</div>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="card">
+        <div class="card-label">Mapa emocional de la audiencia</div>
+        <div class="emotion-grid">
+          <div class="emotion-card em-1">
+            <span class="emotion-icon">😡</span>
+            <div class="emotion-name">Indignación y engaño</div>
+            <div class="emotion-desc">Rabia al percibir que las altas tarifas son producto de manipulación corporativa premeditada, no de condiciones de mercado.</div>
+          </div>
+          <div class="emotion-card em-2">
+            <span class="emotion-icon">🔍</span>
+            <div class="emotion-name">Desconfianza institucional</div>
+            <div class="emotion-desc">Alimentada por la confirmación de que los precios en bolsa fueron artificialmente distorsionados. La sanción valida la duda.</div>
+          </div>
+          <div class="emotion-card em-3">
+            <span class="emotion-icon">💰</span>
+            <div class="emotion-name">Exigencia de retribución</div>
+            <div class="emotion-desc">Respaldados por el mensaje presidencial, los usuarios pasan de la queja a exigir materialmente la devolución del dinero.</div>
+          </div>
+          <div class="emotion-card em-4">
+            <span class="emotion-icon">🛡</span>
+            <div class="emotion-name">Vulnerabilidad del consumidor</div>
+            <div class="emotion-desc">Sensación de indefensión ante posición dominante. La narrativa de antimonopolio instala percepción de abuso estructural.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="narrative-box">
+        <div class="narrative-label">Narrativa dominante instalada</div>
+        <div class="narrative-item">"Sanción histórica por distorsión de precios en bolsa" → Activa alerta sobre prácticas corporativas abusivas</div>
+        <div class="narrative-item">"Atraco al bolsillo y estafa a los usuarios" → Reduce confianza en la facturación</div>
+        <div class="narrative-item">"Exigencia de intervención antimonopolio" → Instala narrativa de abuso de posición dominante</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SECCIÓN 4: RECOMENDACIONES ════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <span class="section-title">Accionables reputacionales</span>
+  </div>
+
+  <div class="recommendations">
+    <div class="rec-item">
+      <div class="rec-number">01</div>
+      <div class="rec-content">
+        <div class="rec-priority">Inmediato · Comunicaciones</div>
+        <div class="rec-title">Profundización de la estrategia de explicación técnica</div>
+        <div class="rec-desc">El 26 de abril Enel emitió un comunicado en Semana aclarando que el alza de marzo obedece al vencimiento de un descuento extraordinario aplicado en enero (−40 pesos/kWh) y que la multa de Superservicios corresponde a hechos de octubre de 2022, sin relación con la factura reciente. Se recomienda profundizar esta línea explicativa con canales propios y vocería directa, de forma que el argumento técnico llegue también al usuario final y no solo a los medios especializados. De esta forma se podría evitar que el término "estafa" se asiente como verdad absoluta en el imaginario mediático.</div>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-number">02</div>
+      <div class="rec-content">
+        <div class="rec-priority">Corto plazo · Relaciones con usuarios</div>
+        <div class="rec-title">Narrativa de compromiso con el usuario</div>
+        <div class="rec-desc">Ante el pedido de "devolución de sobrecostos" del presidente Petro, se podría emitir una comunicación sobre el estado de las facturaciones, la cual apele a transparencia en cobros futuros para mitigar la percepción de cobros sin justificación técnica que se ha instalado en la conversación pública. De esta manera se podría lograr que el usuario perciba que Enel responde y que no está evadiendo la situación.</div>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-number">03</div>
+      <div class="rec-content">
+        <div class="rec-priority">Permanente · Posicionamiento político</div>
+        <div class="rec-title">Desvinculación del debate político</div>
+        <div class="rec-desc">Evitar responder directamente a los ataques personales del presidente. Centrar el mensaje en cumplimiento normativo e inversión en redes. La marca debe ser evaluada por su capacidad técnica, no por sus inconvenientes políticos. Una respuesta política eleva el perfil del conflicto y favorece al atacante.</div>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-number">04</div>
+      <div class="rec-content">
+        <div class="rec-priority">Corto plazo · Gestión de terceros</div>
+        <div class="rec-title">Vocería de terceros técnicos</div>
+        <div class="rec-desc">Procurar incentivar que expertos independientes o gremios del sector expliquen la complejidad del mercado de energía. El hacer uso de voceros neutrales podría llevar a mayor credibilidad ante la audiencia, pues la respuesta no vendría solo de la marca.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<div class="doc-footer">
+  <div class="footer-left">
+    <div class="footer-logo">Punto Cardinal Comunicaciones</div>
+    <strong>Área de Análisis</strong><br>
+    Período analizado: 10 de abril – 26 de abril de 2026<br>
+    Cliente: Enel Colombia · Documento de uso interno
+  </div>
+  <div class="footer-right">
+    <strong style="color:var(--text2);font-size:11px">Daniel Vargas Zapata</strong><br>
+    Versión 2.0 — Edición ejecutiva<br>
+    Confidencial — No reproducir sin autorización<br>
+    © 2026 Punto Cardinal Comunicaciones
+  </div>
+</div>
+
+</div>
+</body>
+</html>
